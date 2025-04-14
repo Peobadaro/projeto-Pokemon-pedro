@@ -1,456 +1,193 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone Disney+</title>
+    <title>Rei Leão</title>
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
+
 <body>
+    <!-- SESSÃO DO CABEÇALHO -->
     <header class="header">
         <div class="header__container">
             <h1>
-                <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+                <img class="header__logo" src="https://servidor-reileao.vercel.app/images/logoreileao.webp" alt="Disney+">
             </h1>
-            <button class="header__menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="header__nav">
-                <span class="header__menu-button__hamburger"></span>
-            </button>
-            <nav class="header__nav" id="header__nav">
-                <ul class="header__nav__list">
-                    <li class="header__nav__item">
-                        <a href="#" class="header__nav__link">Início</a>
-                    </li>
-                    <li class="header__nav__item">
-                        <a href="#" class="header__nav__link">Séries</a>
-                    </li>
-                    <li class="header__nav__item">
-                        <a href="#" class="header__nav__link">Filmes</a>
-                    </li>
-                    <li class="header__nav__item">
-                        <a href="#" class="header__nav__link">Originais</a>
-                    </li>
-                    <li class="header__nav__item">
-                        <a href="#" class="header__nav__link">Esportes</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__buttons">
-                <a href="#" class="button button--secondary">Assine agora</a>
-                <a href="#" class="button button--dark">Entrar</a>
-            </div>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary">Assista agora</a>
+                </li>  
+                <li class="header__links__item">
+                    <a href="#" class="button button--dark">Entrar na Disney</a>
+                </li>
+            </ul>
         </div>
     </header>
+
+    <!-- SEÇÃO DO HERO -->
     <section class="hero">
         <div class="hero__content">
-            <div class="hero__content__branding">
-                <img src="./src/images/disneyplus.svg" alt="Disney+">
-            </div>
-            <h1 class="title">As melhores histórias em um só lugar.</h1>
-            <p class="description">Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros aparelhos. Nossa seleção de títulos em 4K não para de crescer.</p>
-            <a href="#" class="cta-button">Assista agora</a>
+            <h1 class="hero__content__branding">
+                <img src="./dist/images/disneyplus.svg" alt="Disney+">
+            </h1>
+            <h3 class="title--small">
+                O Rei da Selva e sua coleção.
+            </h3>
         </div>
     </section>
-    <section class="franchises">
-        <h2 class="title franchises__title">Franquias Principais</h2>
-        <div class="franchises__container">
-            <!-- Disney -->
-            <article class="franchises__brand">
-                <img src="./src/images/logos/disney.png" alt="Disney" class="franchises__brand__logo">
-                <video class="franchises__brand__video" loop muted>
-                    <source src="./src/videos/disney.mp4" type="video/mp4">
-                </video>
-            </article>
-            <!-- Pixar -->
-            <article class="franchises__brand">
-                <img src="./src/images/logos/pixar.png" alt="Pixar" class="franchises__brand__logo">
-                <video class="franchises__brand__video" loop muted>
-                    <source src="./src/videos/pixar.mp4" type="video/mp4">
-                </video>
-            </article>
-            <!-- Marvel -->
-            <article class="franchises__brand">
-                <img src="./src/images/logos/marvel.png" alt="Marvel" class="franchises__brand__logo">
-                <video class="franchises__brand__video" loop muted>
-                    <source src="./src/videos/marvel.mp4" type="video/mp4">
-                </video>
-            </article>
-            <!-- Star Wars -->
-            <article class="franchises__brand">
-                <img src="./src/images/logos/starwars.png" alt="Star Wars" class="franchises__brand__logo">
-                <video class="franchises__brand__video" loop muted>
-                    <source src="./src/videos/starwars.mp4" type="video/mp4">
-                </video>
-            </article>
-            <!-- National Geographic -->
-            <article class="franchises__brand">
-                <img src="./src/images/logos/natgeo.png" alt="National Geographic" class="franchises__brand__logo">
-                <video class="franchises__brand__video" loop muted>
-                    <source src="./src/videos/natgeo.mp4" type="video/mp4">
-                </video>
-            </article>
-        </div>
-    </section>
+
+    <!-- SECTION DOS SHOWS -->
     <section class="shows">
         <nav class="shows__tabs">
+            <!-- EM BREVE BOTÃO -->
             <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">
-                Em breve
-            </button>
-            <button data-tab-button="populares" class="shows__tabs__button">
                 Mais populares
             </button>
-            <button data-tab-button="star_plus" class="shows__tabs__button">
-                Mais no Star+
+            <!-- POPULARES BOTÃO -->
+            <button data-tab-button="populares" class="shows__tabs__button">
+                Sugestões
             </button>
         </nav>
+        <!-- EM BREVE SESSÃO -->
         <ul data-tab-id="em_breve" class="shows__list shows__list--is-active">
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/em_breve/reileao1.webp" alt="Rei Leão">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/em_breve/reileão2.webp" alt="Rei Leão 2">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/em_breve/reileao3.webp" alt="Rei Leão 3">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/em_breve/liveaction1.webp" alt="Rei Leão">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/em_breve/guardadolion.webp" alt="Rei Leão">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/em_breve/timaoepumba.webp" alt="Rei Leão">
             </li>
         </ul>
+        <!-- MAIS POPULARES SESSÃO  -->
         <ul data-tab-id="populares" class="shows__list">
             <li class="shows__list__item">
-                <img src="./dist/images/mais_populares/obi_wan.jpg" alt="Obi Wan">
+                <img src="https://servidor-reileao.vercel.app/images/mais_populares/moglin.webp" alt="Moglin">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/mais_populares/mulan.webp" alt="Mulan">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/mais_populares/belaefera.webp" alt="Bela e a Fera">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/mais_populares/aladin.webp" alt="Alladdin">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/mais_populares/pequenasereia.webp" alt="Pequena Sereia">
             </li>
             <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
-            </li>
-        </ul>
-        <ul data-tab-id="star_plus" class="shows__list">
-            <li class="shows__list__item">
-                <img src="./dist/images/mais_no_star_plus/libertadores.jpg" alt="Libertadores">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
-            </li>
-            <li class="shows__list__item">
-                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+                <img src="https://servidor-reileao.vercel.app/images/mais_populares/damaevagabundo.webp" alt="Dama e o vagabundo">
             </li>
         </ul>
     </section>
-    <section class="plans">
-        <h2 class="plans__title">Escolha seu plano</h2>
-        <p class="plans__description">Aproveite o Disney+ com a melhor experiência em filmes, séries e originais. Cancele a qualquer momento.</p>
-        
-        <div class="plans__container">
-            <!-- Plano Mensal -->
-            <article class="plans__card">
-                <h3 class="plans__card__title">Mensal</h3>
-                <div class="plans__card__price">
-                    <span class="plans__card__price__value">R$ 27,90</span>
-                    <span class="plans__card__price__period">/mês</span>
-                </div>
-                <ul class="plans__card__features">
-                    <li>Acesso a todo o catálogo</li>
-                    <li>Até 4 telas simultâneas</li>
-                    <li>Downloads ilimitados</li>
-                    <li>Qualidade 4K, HDR10 e Dolby Atmos</li>
-                </ul>
-                <a href="#" class="plans__card__cta">Assine Agora</a>
-            </article>
 
-            <!-- Plano Anual (Destaque) -->
-            <article class="plans__card plans__card--featured">
-                <h3 class="plans__card__title">Anual</h3>
-                <div class="plans__card__price">
-                    <span class="plans__card__price__value">R$ 279,90</span>
-                    <span class="plans__card__price__period">/ano</span>
-                </div>
-                <ul class="plans__card__features">
-                    <li>Economize 2 meses</li>
-                    <li>Acesso a todo o catálogo</li>
-                    <li>Até 4 telas simultâneas</li>
-                    <li>Downloads ilimitados</li>
-                    <li>Qualidade 4K, HDR10 e Dolby Atmos</li>
-                </ul>
-                <a href="#" class="plans__card__cta">Assine Agora</a>
-            </article>
-
-            <!-- Plano Combo+ -->
-            <article class="plans__card">
-                <h3 class="plans__card__title">Disney+ e Star+</h3>
-                <div class="plans__card__price">
-                    <span class="plans__card__price__value">R$ 45,90</span>
-                    <span class="plans__card__price__period">/mês</span>
-                </div>
-                <ul class="plans__card__features">
-                    <li>Disney+ e Star+ juntos</li>
-                    <li>Esportes ao vivo</li>
-                    <li>Downloads ilimitados</li>
-                    <li>Até 4 telas simultâneas</li>
-                    <li>Qualidade 4K, HDR10 e Dolby Atmos</li>
-                </ul>
-                <a href="#" class="plans__card__cta">Assine Agora</a>
-            </article>
-        </div>
-    </section>
+    <!-- SESSÃO ASSISTA DO SEU JEITO -->
     <section class="image-text-section">
-        <img src="./dist/images/tv_pc_tablet_celular.png" alt="Imagem com TV, Computador, tablet e celular">
+        <img src="./dist/images/tv_pc_tablet_celular.png" alt="">
         <div class="image-text-section__text_container">
-            <h2 class="title">Assista do seu jeito</h2>
-            <p class="text--big">
-                Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros aparelhos. Nossa seleção de títulos em 4K não para de crescer. Além disso, para a felicidade de todos, é possível assistir em até 4 telas ao mesmo tempo.
-            </p>
+        <h2 class="title">Só na Disney+</h2>
+        <p class="text--big">
+            Assista em qualquer lugar, em qualquer momento, no seu celular, tablet, computador. Nossa seleção de titulos em 4K não para de crescer. Além disso , para a felicidade de todos, é possivel assistir em 4 telas ao mesmo tempo
+        </p>
         </div>
     </section>
-    <section class="image-text-section image-text-section--image-full-width">
-        <picture>
-            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png" />
-            <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
-        </picture>
-        <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
-            <h2 class="title">Baixe filmes e séries</h2>
-            <p class="text--big">
-                Baixe e assista quando e onde quiser. Assim, seus favoritos estão sempre com você, até mesmo sem internet.
-            </p>
-        </div>
-    </section>
+
+    <!-- SESSÃO DE DISPOSITIVOS  -->
+
     <section class="available-devices">
-        <div class="available-devices__container">
-            <img src="./src/images/devices-collection.png" alt="Dispositivos disponíveis" class="available-devices__image">
-            <div class="available-devices__content">
-                <h2 class="available-devices__content__title">Disponível nos seus dispositivos favoritos</h2>
-                <p class="available-devices__content__description">
-                    Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.
-                </p>
-                <div class="available-devices__list">
-                    <!-- TV -->
-                    <div class="available-devices__list__category">
-                        <img src="./dist/images/dispositivos/tv.png" alt="TV" class="available-devices__list__category__icon">
-                        <h3 class="available-devices__list__category__title">TV</h3>
-                        <ul class="available-devices__list__category__items">
-                            <li>Amazon Fire TV</li>
-                            <li>Android TV</li>
-                            <li>Apple TV</li>
-                            <li>Chromecast</li>
-                            <li>TVs LG</li>
-                            <li>Samsung</li>
-                        </ul>
-                    </div>
-
-                    <!-- Computador -->
-                    <div class="available-devices__list__category">
-                        <img src="./dist/images/dispositivos/computador.png" alt="Computador" class="available-devices__list__category__icon">
-                        <h3 class="available-devices__list__category__title">Computador</h3>
-                        <ul class="available-devices__list__category__items">
-                            <li>Chrome OS</li>
-                            <li>MacOS</li>
-                            <li>PC Windows</li>
-                        </ul>
-                    </div>
-
-                    <!-- Celulares e Tablets -->
-                    <div class="available-devices__list__category">
-                        <img src="./dist/images/dispositivos/celular.png" alt="Mobile" class="available-devices__list__category__icon">
-                        <h3 class="available-devices__list__category__title">Celulares e Tablets</h3>
-                        <ul class="available-devices__list__category__items">
-                            <li>Tablets Amazon Fire</li>
-                            <li>Celulares e Tablets Android</li>
-                            <li>iPhone e iPad</li>
-                        </ul>
-                    </div>
-
-                    <!-- Videogames -->
-                    <div class="available-devices__list__category">
-                        <img src="./dist/images/dispositivos/videogames.png" alt="Videogame" class="available-devices__list__category__icon">
-                        <h3 class="available-devices__list__category__title">Videogames</h3>
-                        <ul class="available-devices__list__category__items">
-                            <li>PS4</li>
-                            <li>PS5</li>
-                            <li>Xbox One</li>
-                            <li>Xbox Series X</li>
-                            <li>Xbox Series S</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title" class="title">Perguntas Frequentes</h2>
-        <ul class="faq__questions">
-            <li class="faq__questions__item">
-                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-1">
-                    O que está incluído no Disney+?
-                </button>
-                <div class="faq__questions__item__answer" id="faq-1" aria-hidden="true">
-                    O Disney+ oferece:
-                    • Experiência premium sem comerciais
-                    • As melhores histórias da Disney, Pixar, Marvel, Star Wars e National Geographic, tudo em um só lugar
-                    • Downloads ilimitados em até 10 dispositivos compatíveis
-                    • Mais de 300 títulos em 4K UHD e HDR
-                    • A possibilidade de assistir em até 4 dispositivos compatíveis simultaneamente sem custo adicional
-                    • IMAX Enhanced: disponível para alguns títulos da Marvel em dispositivos compatíveis
-                </div>
+        <h2 class="title">Disponivel nos seus dispositivos favoritos</h2>
+        <ul class="available-devices__list">
+            <li class="available-devices__list__item">
+                <img src="./dist/images/dispositivos/tv.png" alt="TV">
+                <h4 class="title--small">Filmes</h4>
+                <ul class="text">
+                    <li>Rei Leão 1</li>
+                    <li>Rei leão 2</li>
+                    <li>Rei Leão 3</li>
+                    <li>Rei leão Live-action</li>
+                    <li>Mufasa</li>
+                </ul>
             </li>
-            <li class="faq__questions__item">
-                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-2">
-                    Já tem o Disney+ ou o Star+ e quer o Combo+?
-                </button>
-                <div class="faq__questions__item__answer" id="faq-2" aria-hidden="true">
-                    Ao assinar o Combo+:
-                    • O valor da sua assinatura existente será descontado do preço do Combo+
-                    • Se você assina o plano mensal, o valor que você paga mensalmente será descontado do preço do Combo+
-                    • Se você assina o plano anual, dividiremos o valor que você já pagou em 12 vezes e descontaremos esse valor mensalmente do preço do Combo+
-                    • Você vai receber um e-mail com os valores detalhados
-                </div>
+            <li class="available-devices__list__item">
+                <img src="./dist/images/dispositivos/videogames.png" alt="Videogames">
+                <h4 class="title--small">Jogos</h4>
+                <ul class="text">
+                    <li>The Lion King (1994)</li>
+                    <li>The Lion King (1994 - Game Boy)</li>
+                    <li>Disney's Animated Storybook: The Lion King </li>
+                    <li>Timon & Pumbaa's Jungle Games </li>
+                </ul>
             </li>
-            <li class="faq__questions__item">
-                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-3">
-                    Quais formas de pagamento posso utilizar?
-                </button>
-                <div class="faq__questions__item__answer" id="faq-3" aria-hidden="true">
-                    Você pode utilizar: cartão de débito, cartão de crédito, PayPal, Mercado Pago, e também empresas parceiras como Vivo, Tim, Claro, Oi e outros.
-                </div>
-            </li>
-            <li class="faq__questions__item">
-                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-4">
-                    Como posso ver o conteúdo com classificação indicativa 18+?
-                </button>
-                <div class="faq__questions__item__answer" id="faq-4" aria-hidden="true">
-                    Para ver o conteúdo com classificação indicativa 18+, você precisa ativar o controle parental do Disney+ em sua conta. Você pode fazer isso através das configurações de perfil.
-                </div>
+            <li class="available-devices__list__item">
+                <img src="./dist/images/dispositivos/celular.png" alt="Celular">
+                <h4 class="title--small">Series e outros</h4>
+                <ul class="text">
+                    <li>Guarda do Leão</li>
+                    <li>Timão e Pumba</li>
+                </ul>
             </li>
         </ul>
     </section>
 
+    <!-- SESSÃO DO RODAPÉ -->
     <footer class="footer">
         <div class="footer__container">
-            <img class="footer__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
-            
-            <nav class="footer__nav">
-                <!-- Sobre -->
-                <ul class="footer__links">
-                    <li class="footer__links__title">Empresa</li>
-                    <li class="footer__links__item">
-                        <a href="#">Sobre o Disney+</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Carreiras</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Imprensa</a>
-                    </li>
-                </ul>
-
-                <!-- Ajuda -->
-                <ul class="footer__links">
-                    <li class="footer__links__title">Ajuda</li>
-                    <li class="footer__links__item">
-                        <a href="#">Central de Ajuda</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Dispositivos Compatíveis</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Guia para Início</a>
-                    </li>
-                </ul>
-
-                <!-- Legal -->
-                <ul class="footer__links">
-                    <li class="footer__links__title">Legal</li>
-                    <li class="footer__links__item">
-                        <a href="#">Termos de Uso</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Política de Privacidade</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Proteção de Dados no Brasil</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Anúncios Personalizados</a>
-                    </li>
-                </ul>
-
-                <!-- Contato -->
-                <ul class="footer__links">
-                    <li class="footer__links__title">Contato</li>
-                    <li class="footer__links__item">
-                        <a href="#">Suporte</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Reporte um Problema</a>
-                    </li>
-                    <li class="footer__links__item">
-                        <a href="#">Feedback</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Redes Sociais -->
-            <div class="footer__social">
-                <a href="#" class="footer__social__link" aria-label="Facebook">
-                    <img src="./dist/images/social/facebook.svg" alt="Facebook">
-                </a>
-                <a href="#" class="footer__social__link" aria-label="Twitter">
-                    <img src="./dist/images/social/twitter.svg" alt="Twitter">
-                </a>
-                <a href="#" class="footer__social__link" aria-label="Instagram">
-                    <img src="./dist/images/social/instagram.svg" alt="Instagram">
-                </a>
-                <a href="#" class="footer__social__link" aria-label="YouTube">
-                    <img src="./dist/images/social/youtube.svg" alt="YouTube">
-                </a>
-            </div>
-
-            <!-- Seletor de Idioma -->
-            <div class="footer__language">
-                <img src="./dist/images/icones/globe.svg" alt="Globo" class="footer__language__icon">
-                <select aria-label="Selecione o idioma">
-                    <option value="pt-BR" selected>Português</option>
-                    <option value="en-US">English</option>
-                </select>
-            </div>
-
-            <!-- Informações Legais -->
-            <div class="footer__legal">
-                <p>© 2024 Disney. Todos os direitos reservados.</p>
-                <p>
-                    O Disney+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP – CEP 04578-903, Brasil e CNPJ/M 73.042.962/0004-20
-                </p>
-            </div>
+            <img class="footer__logo" src="https://servidor-reileao.vercel.app/images/logoreileao.webp" alt="Disney +">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <div class="lenguage-selector">
+                        <img src="./dist/images/icones/globe.svg" alt="globo do mundo">
+                        <select>
+                            <option>English</option>
+                            <option selected->Português</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Termos e Condições de uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Saiba mais</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Política de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Proteção de Dados no Brasil</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Anúncios personalizados</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Contrato de Assinatura</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Sobre o Disney+</a>
+                </li>
+            </ul>
+            <p class="text--small">
+                © 2024 Disney e suas empresas afiliadas. Todos os direitos reservados.
+            </p>
+            <p class="text--small">
+                A programação do conteúdo esportivo varia de acordo com o plano. Para usar o Disney+, é necessário ser assinante e ter mais de 18 anos de idade. Conteúdo sujeito a disponibilidade.
+                O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP – CEP 04578-903, Brasil e CNPJ/M 73.042.962/0004-20
+            </p>
         </div>
     </footer>
 
-    
 
     <script src="./dist/js/main.js"></script>
 </body>

@@ -1,24 +1,21 @@
-@use 'fonts';
 @use 'variaveis';
 @use 'hero';
 @use 'shows';
-@use 'plans';
-@use 'available-devices'; 
-@use 'faq';
+@use 'available';
 @use 'footer';
 @use 'header';
-@use 'franchises';
-@use 'subscription-plans';
+
+
 
 @font-face {
     font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    src: url(../../assents/fonts/Avenir-Regular.woff2);
     font-weight: 400;
 }
 
 @font-face {
     font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    src: url(../../assents/fonts/Avenir-Bold.woff2);
     font-weight: 700;
 }
 
@@ -34,21 +31,21 @@ body {
     background-color: variaveis.$corDeFundo;
 }
 
-@mixin text($fontSize: 16px) {
+@mixin text ($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
-    color: variaveis.$corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal
 }
 
-@mixin title($fontSize: 40px) {
+@mixin title ($fontSize: 40px) {
     @include text($fontSize);
-    color: variaveis.$corTextoSecundario;
+    color: variaveis.$corTextoSecundario
 }
 
 .text--big {
     @include text(18px);
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         @include text(15px);
     }
 }
@@ -56,7 +53,7 @@ body {
 .text {
     @include text;
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         @include text(14px);
     }
 }
@@ -64,7 +61,7 @@ body {
 .text--small {
     @include text(12px);
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         @include text(11px);
     }
 }
@@ -78,7 +75,7 @@ body {
 .title--big {
     @include title(44px);
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         @include title(26px);
     }
 }
@@ -86,7 +83,7 @@ body {
 .title {
     @include title;
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         @include title(24px);
     }
 }
@@ -94,10 +91,10 @@ body {
 .title--small {
     @include title(28px);
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         @include title(22px);
     }
-} 
+}
 
 .button {
     display: flex;
@@ -113,19 +110,19 @@ body {
     text-decoration: none;
     padding: 8px 14px;
     letter-spacing: 1px;
-    border: 1px solid  variaveis.$corDeFundoBotaoPrimario;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
 
     &:hover {
         background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
     }
 
     &--secondary {
-        background-color: variaveis.$corDeFundoBotaoSecundario;
-        border-color: variaveis.$corDeFundoBotaoSecundario;
+    background-color: variaveis.$corDeFundoBotaoSecundario;
+    border-color: variaveis.$corDeFundoBotaoSecundario;
 
         &:hover {
-            background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
-        }
+        background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+    }
     }
 
     &--dark {
@@ -145,7 +142,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         display: block;
     }
 
@@ -155,7 +152,7 @@ body {
 
     &__text_container {
         padding: 0 2vw;
-
+    
         h2 {
             margin-bottom: 24px;
         }
@@ -179,7 +176,7 @@ body {
             flex-direction: column;
             justify-content: center;
 
-            @media (max-width: 768px) {
+            @media (max-width:768px) {
                 position: relative;
                 left: 0;
                 width: 100%;

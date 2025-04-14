@@ -1,28 +1,71 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const franchiseBrands = document.querySelectorAll('.franchises__brand');
+    const buttons = document.querySelectorAll ('[data-tab-button]');
+    const questions = document.querySelectorAll ('[data-faq-question]');
 
-    franchiseBrands.forEach(brand => {
-        const video = brand.querySelector('video');
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
 
-        // Inicia o vídeo quando o mouse passar por cima
-        brand.addEventListener('mouseenter', () => {
-            video.play();
-        });
+    window.addEventListener('scroll', function() {
+        const posicaoAtual = window.scrollY;
 
-        // Pausa e reseta o vídeo quando o mouse sair
-        brand.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
-        });
+        if (posicaoAtual < alturaHero) {
+            ocultaElementoDoHeader();
+        }else {
+            exibeElementoDoHeader();
+        }
+    })
 
-        // Tratamento para dispositivos touch
-        brand.addEventListener('touchstart', () => {
-            if (video.paused) {
-                video.play();
-            } else {
-                video.pause();
-                video.currentTime = 0;
-            }
-        });
-    });
-}); 
+
+    // SEÇÃO DE ATRAÇÕES, PROGRAMAÇÃO DAS ABAS
+    for(let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(botao) {
+            const abaAlvo = botao.target.dataset.tabButton;
+            const aba = document.querySelector(`[data-tab-id=${abaAlvo}]`);
+            escondeTodasAbas();
+            aba.classList.add('shows__list--is-active')
+            removeBotaoAtivo ();
+            botao.target.classList.add('shows__tabs__button--is-active');
+        })
+    }
+
+
+    // SECÃO FAQ, ACCORDION
+    for(let i = 0; i < questions.length; i++) {
+        questions[i].addEventListener('click', abreOuFechaResposta)
+    }
+})
+
+function ocultaElementoDoHeader () {
+    const header = document.querySelector('.header');
+    header.classList.add('header--is-hidden')
+}
+
+function exibeElementoDoHeader () {
+    const header = document.querySelector('.header');
+    header.classList.remove('header--is-hidden')
+}
+
+
+
+function abreOuFechaResposta(elemento) {
+    const classe = 'faq__questions__item--is-open';
+    const elementoPai = elemento.target.parentNode;
+
+    elementoPai.classList.toggle(classe);
+}
+
+function removeBotaoAtivo () {
+    const buttons = document.querySelectorAll ('[data-tab-button]');
+
+    for(let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('shows__tabs__button--is-active');
+    }
+}
+
+function escondeTodasAbas() {
+    const tabsContainer = document.querySelectorAll('[data-tab-id]')
+
+    for (let i = 0; i < tabsContainer.length; i++) {
+        tabsContainer[i].classList.remove('shows__list--is-active')
+    }
+}

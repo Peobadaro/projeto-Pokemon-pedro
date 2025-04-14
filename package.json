@@ -1,30 +1,21 @@
 {
-    "name": "clone-disneyplus-pedro",
+    "name": "clone_disneyplus",
     "version": "1.0.0",
-    "description": "Clone do Disney+ para estudo",
+    "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "gulp watch",
-        "build": "gulp build",
-        "start": "gulp",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Peobadaro/clone-disneyplus-pedro.git"
+      "dev": "gulp watch",
+      "build": "gulp",
+      "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "Pedro Badaro",
+    "author": "",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Peobadaro/clone-disneyplus-pedro/issues"
-    },
-    "homepage": "https://github.com/Peobadaro/clone-disneyplus-pedro#readme",
     "devDependencies": {
-        "gulp": "^4.0.2",
-        "gulp-imagemin": "^7.1.0",
-        "gulp-sass": "^5.1.0",
-        "gulp-uglify": "^3.0.2",
-        "sass": "^1.56.1"
+      "gulp": "^4.0.2",
+      "gulp-imagemin": "^7.1.0",
+      "gulp-sass": "^6.0.0",
+      "gulp-uglify": "^3.0.2",
+      "sass": "^1.82.0"
     }
-}
+  }
