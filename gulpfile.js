@@ -21,9 +21,20 @@ function images() {
         .pipe(gulp.dest('./dist/images'));
 }
 
-exports.default = gulp.parallel(styles, images, scripts);
+function html() {
+    return gulp.src('./*.html')
+        .pipe(gulp.dest('./dist'));
+}
+
+function fonts() {
+    return gulp.src('./assets-fonts/**/*')
+        .pipe(gulp.dest('./dist/fonts'));
+}
+
+exports.default = gulp.parallel(styles, images, scripts, html, fonts);
 
 exports.watch = function() {
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles));
     gulp.watch('./src/scripts/*.js', gulp.parallel(scripts));
+    gulp.watch('./*.html', gulp.parallel(html));
 }
