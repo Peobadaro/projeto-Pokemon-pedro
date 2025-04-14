@@ -1,64 +1,62 @@
 /* Franchises Section */
 .franchises {
-    padding: 5.6vw;
-    background-color: #040714;
+    padding: 60px 20px;
+    background-color: #000;
 
     &__title {
+        color: #fff;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 40px;
+        font-size: 32px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
     }
 
     &__container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 24px;
+        gap: 20px;
         max-width: 1200px;
         margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         @media (max-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
         }
+
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__brand {
         position: relative;
-        border-radius: 4px;
+        aspect-ratio: 16/9;
         overflow: hidden;
-        transition: all 0.3s ease;
+        border-radius: 8px;
+        cursor: pointer;
 
         &:hover {
-            transform: scale(1.05);
-
-            &::after {
-                opacity: 1;
-            }
-
-            .franchises__brand__logo {
-                opacity: 0;
-            }
-
             .franchises__brand__video {
                 opacity: 1;
             }
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
         &__logo {
-            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
             height: auto;
-            opacity: 1;
+            z-index: 2;
             transition: opacity 0.3s ease;
         }
 

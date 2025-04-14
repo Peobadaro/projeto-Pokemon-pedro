@@ -13,14 +13,32 @@
             <h1>
                 <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
             </h1>
-            <ul class="header__links">
-                <li class="header__links__item">
-                    <a href="#" class="button button--secondary">Assine agora</a>
-                </li>
-                <li class="header__links__item">
-                    <a href="#" class="button button--dark">Entrar</a>
-                </li>
-            </ul>
+            <button class="header__menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="header__nav">
+                <span class="header__menu-button__hamburger"></span>
+            </button>
+            <nav class="header__nav" id="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__item">
+                        <a href="#" class="header__nav__link">Início</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a href="#" class="header__nav__link">Séries</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a href="#" class="header__nav__link">Filmes</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a href="#" class="header__nav__link">Originais</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a href="#" class="header__nav__link">Esportes</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__buttons">
+                <a href="#" class="button button--secondary">Assine agora</a>
+                <a href="#" class="button button--dark">Entrar</a>
+            </div>
         </div>
     </header>
     <section class="hero">
@@ -335,46 +353,100 @@
     <footer class="footer">
         <div class="footer__container">
             <img class="footer__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
-            <ul class="footer__links">
-                <li class="footer__links__item">
-                    <div class="language-selector">
-                        <img src="./dist/images/icones/globe.svg" alt="Globo do mundo">
-                        <select>
-                            <option>English</option>
-                            <option selected>Português</option>
-                        </select>
-                    </div>
-                </li>
-                <li class="footer__links__item">
-                    <a href="#" class="text--small">Termos e Condições de Uso</a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="" class="text--small">Política de privacidade</a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="#" class="text--small">Proteção de Dados no Brasil</a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="#" class="text--small">Anúncios personalizados</a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="" class="text--small">
-                        Dispositivos compatíveis
-                    </a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="#" class="text--small">Ajuda</a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="" class="text--small">Sobre o Disney+</a>
-                </li>
-            </ul>
-            <p class="text--small">
-                ® 2022 Disney, Disney+ e The Walt Disney Company. Todos os direitos reservados. Serviço de assinatura paga. Conteúdo sujeito a disponibilidade.
-            </p>
-            <p class="text--small">
-                Disney+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP – CEP 04578-903, Brasil e CNPJ/M 73.042.962/0004-20
-            </p>
+            
+            <nav class="footer__nav">
+                <!-- Sobre -->
+                <ul class="footer__links">
+                    <li class="footer__links__title">Empresa</li>
+                    <li class="footer__links__item">
+                        <a href="#">Sobre o Disney+</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Carreiras</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Imprensa</a>
+                    </li>
+                </ul>
+
+                <!-- Ajuda -->
+                <ul class="footer__links">
+                    <li class="footer__links__title">Ajuda</li>
+                    <li class="footer__links__item">
+                        <a href="#">Central de Ajuda</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Dispositivos Compatíveis</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Guia para Início</a>
+                    </li>
+                </ul>
+
+                <!-- Legal -->
+                <ul class="footer__links">
+                    <li class="footer__links__title">Legal</li>
+                    <li class="footer__links__item">
+                        <a href="#">Termos de Uso</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Política de Privacidade</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Proteção de Dados no Brasil</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Anúncios Personalizados</a>
+                    </li>
+                </ul>
+
+                <!-- Contato -->
+                <ul class="footer__links">
+                    <li class="footer__links__title">Contato</li>
+                    <li class="footer__links__item">
+                        <a href="#">Suporte</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Reporte um Problema</a>
+                    </li>
+                    <li class="footer__links__item">
+                        <a href="#">Feedback</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Redes Sociais -->
+            <div class="footer__social">
+                <a href="#" class="footer__social__link" aria-label="Facebook">
+                    <img src="./dist/images/social/facebook.svg" alt="Facebook">
+                </a>
+                <a href="#" class="footer__social__link" aria-label="Twitter">
+                    <img src="./dist/images/social/twitter.svg" alt="Twitter">
+                </a>
+                <a href="#" class="footer__social__link" aria-label="Instagram">
+                    <img src="./dist/images/social/instagram.svg" alt="Instagram">
+                </a>
+                <a href="#" class="footer__social__link" aria-label="YouTube">
+                    <img src="./dist/images/social/youtube.svg" alt="YouTube">
+                </a>
+            </div>
+
+            <!-- Seletor de Idioma -->
+            <div class="footer__language">
+                <img src="./dist/images/icones/globe.svg" alt="Globo" class="footer__language__icon">
+                <select aria-label="Selecione o idioma">
+                    <option value="pt-BR" selected>Português</option>
+                    <option value="en-US">English</option>
+                </select>
+            </div>
+
+            <!-- Informações Legais -->
+            <div class="footer__legal">
+                <p>© 2024 Disney. Todos os direitos reservados.</p>
+                <p>
+                    O Disney+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP – CEP 04578-903, Brasil e CNPJ/M 73.042.962/0004-20
+                </p>
+            </div>
         </div>
     </footer>
 
