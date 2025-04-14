@@ -7,14 +7,14 @@
     &__list {
         margin-top: 44px;
         display: none;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
         @media (max-width: 768px) {
             grid-template-columns: 1fr 1fr;
         }
 
-        &--is-active {
+        &--is-active{
             display: grid;
         }
 
@@ -22,19 +22,6 @@
             img {
                 max-width: 100%;
                 border-radius: 4px;
-                transition: all 0.3s ease;
-
-                &:hover {
-                    transform: scale(1.05);
-                }
-            }
-
-            &__text {
-                margin-top: 16px;
-
-                h4 {
-                    margin-bottom: 8px;
-                }
             }
         }
     }
@@ -42,23 +29,21 @@
     &__tabs {
         display: flex;
         justify-content: center;
-        gap: 40px;
-        
+
         @media (max-width: 768px) {
             white-space: nowrap;
             overflow-x: scroll;
             padding-left: 20px;
-            gap: 20px;
         }
 
-        &__button {
+        &__button{
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
             border: none;
             padding-bottom: 5px;
             background: none;
             text-transform: uppercase;
-            cursor: pointer;
+            margin: 0 1vw;
             border-bottom: 5px solid transparent;
 
             &--is-active {
@@ -67,7 +52,7 @@
 
             @media (max-width: 768px) {
                 font-size: 16px;
-            }
+            }   
         }
     }
 }
