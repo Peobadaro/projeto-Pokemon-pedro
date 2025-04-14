@@ -1,21 +1,24 @@
 {
     "name": "clone_disneyplus",
     "version": "1.0.0",
-    "description": "",
+    "description": "Clone do Disney+ para estudo",
     "main": "index.js",
+    "engines": {
+        "node": ">=14.0.0"
+    },
     "scripts": {
-      "dev": "gulp watch",
-      "build": "gulp",
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "gulp watch",
+        "build": "gulp build",
+        "start": "gulp"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "gulp": "^4.0.2",
-      "gulp-imagemin": "^7.1.0",
-      "gulp-sass": "^6.0.0",
-      "gulp-uglify": "^3.0.2",
-      "sass": "^1.82.0"
+        "gulp": "^4.0.2",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.62.0"
     }
-  }
+}
