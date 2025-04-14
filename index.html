@@ -284,31 +284,49 @@
             </div>
         </div>
     </section>
-    <section class="faq">
-        <h2 class="title">Perguntas frequentes</h2>
+    <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="title">Perguntas Frequentes</h2>
         <ul class="faq__questions">
             <li class="faq__questions__item">
-                <div class="faq__questions__item__question" data-faq-question>
-                    Pergunta?
-                </div>
-                <div class="faq__questions__item__answer text--big">
-                    A resposta da pergunta
-                </div>
-            </li>
-            <li class="faq__questions__item">
-                <div class="faq__questions__item__question" data-faq-question>
-                    Pergunta?
-                </div>
-                <div class="faq__questions__item__answer text--big">
-                    A resposta da pergunta
+                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-1">
+                    O que está incluído no Disney+?
+                </button>
+                <div class="faq__questions__item__answer" id="faq-1" aria-hidden="true">
+                    O Disney+ oferece:
+                    • Experiência premium sem comerciais
+                    • As melhores histórias da Disney, Pixar, Marvel, Star Wars e National Geographic, tudo em um só lugar
+                    • Downloads ilimitados em até 10 dispositivos compatíveis
+                    • Mais de 300 títulos em 4K UHD e HDR
+                    • A possibilidade de assistir em até 4 dispositivos compatíveis simultaneamente sem custo adicional
+                    • IMAX Enhanced: disponível para alguns títulos da Marvel em dispositivos compatíveis
                 </div>
             </li>
             <li class="faq__questions__item">
-                <div class="faq__questions__item__question" data-faq-question>
-                    Pergunta?
+                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-2">
+                    Já tem o Disney+ ou o Star+ e quer o Combo+?
+                </button>
+                <div class="faq__questions__item__answer" id="faq-2" aria-hidden="true">
+                    Ao assinar o Combo+:
+                    • O valor da sua assinatura existente será descontado do preço do Combo+
+                    • Se você assina o plano mensal, o valor que você paga mensalmente será descontado do preço do Combo+
+                    • Se você assina o plano anual, dividiremos o valor que você já pagou em 12 vezes e descontaremos esse valor mensalmente do preço do Combo+
+                    • Você vai receber um e-mail com os valores detalhados
                 </div>
-                <div class="faq__questions__item__answer text--big">
-                    A resposta da pergunta
+            </li>
+            <li class="faq__questions__item">
+                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-3">
+                    Quais formas de pagamento posso utilizar?
+                </button>
+                <div class="faq__questions__item__answer" id="faq-3" aria-hidden="true">
+                    Você pode utilizar: cartão de débito, cartão de crédito, PayPal, Mercado Pago, e também empresas parceiras como Vivo, Tim, Claro, Oi e outros.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <button class="faq__questions__item__question" aria-expanded="false" aria-controls="faq-4">
+                    Como posso ver o conteúdo com classificação indicativa 18+?
+                </button>
+                <div class="faq__questions__item__answer" id="faq-4" aria-hidden="true">
+                    Para ver o conteúdo com classificação indicativa 18+, você precisa ativar o controle parental do Disney+ em sua conta. Você pode fazer isso através das configurações de perfil.
                 </div>
             </li>
         </ul>
