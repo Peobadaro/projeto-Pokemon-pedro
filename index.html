@@ -224,51 +224,65 @@
         </div>
     </section>
     <section class="available-devices">
-        <h2 class="title">Disponível nos seus dispositivos favoritos</h2>
-        <ul class="available-devices__list">
-            <li class="available-devices__list__item">
-                <img src="./dist/images/dispositivos/computador.png" alt="Computador">
-                <h4 class="title--small">Computador</h4>
-                <ul class="text">
-                    <li>Chrome OS</li>
-                    <li>MacOS</li>
-                    <li>PC Windows</li>
-                </ul>
-            </li>
-            <li class="available-devices__list__item">
-                <img src="./dist/images/dispositivos/tv.png" alt="Computador">
-                <h4 class="title--small">TV</h4>
-                <ul class="text">
-                    <li>Amazon Fire TV</li>
-                    <li>Android TV</li>
-                    <li>Apple TV</li>
-                    <li>Chromecast</li>
-                    <li>TVs LG</li>
-                    <li>Roku</li>
-                    <li>Samsung</li>
-                </ul>
-            </li>
-            <li class="available-devices__list__item">
-                <img src="./dist/images/dispositivos/videogames.png" alt="Computador">
-                <h4 class="title--small">Videogames</h4>
-                <ul class="text">
-                    <li>PS4</li>
-                    <li>PS5</li>
-                    <li>Xbox One</li>
-                    <li>Xbox Serix X</li>
-                    <li>Xbox Serix S</li>
-                </ul>
-            </li>
-            <li class="available-devices__list__item">
-                <img src="./dist/images/dispositivos/celular.png" alt="Computador">
-                <h4 class="title--small">Celulares e tablets</h4>
-                <ul class="text">
-                    <li>Tablets Amazon Fire</li>
-                    <li>Celulares e Tablets Android</li>
-                    <li>iPhone e iPad</li>
-                </ul>
-            </li>
-        </ul>
+        <div class="available-devices__container">
+            <img src="./src/images/devices-collection.png" alt="Dispositivos disponíveis" class="available-devices__image">
+            <div class="available-devices__content">
+                <h2 class="available-devices__content__title">Disponível nos seus dispositivos favoritos</h2>
+                <p class="available-devices__content__description">
+                    Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.
+                </p>
+                <div class="available-devices__list">
+                    <!-- TV -->
+                    <div class="available-devices__list__category">
+                        <img src="./dist/images/dispositivos/tv.png" alt="TV" class="available-devices__list__category__icon">
+                        <h3 class="available-devices__list__category__title">TV</h3>
+                        <ul class="available-devices__list__category__items">
+                            <li>Amazon Fire TV</li>
+                            <li>Android TV</li>
+                            <li>Apple TV</li>
+                            <li>Chromecast</li>
+                            <li>TVs LG</li>
+                            <li>Samsung</li>
+                        </ul>
+                    </div>
+
+                    <!-- Computador -->
+                    <div class="available-devices__list__category">
+                        <img src="./dist/images/dispositivos/computador.png" alt="Computador" class="available-devices__list__category__icon">
+                        <h3 class="available-devices__list__category__title">Computador</h3>
+                        <ul class="available-devices__list__category__items">
+                            <li>Chrome OS</li>
+                            <li>MacOS</li>
+                            <li>PC Windows</li>
+                        </ul>
+                    </div>
+
+                    <!-- Celulares e Tablets -->
+                    <div class="available-devices__list__category">
+                        <img src="./dist/images/dispositivos/celular.png" alt="Mobile" class="available-devices__list__category__icon">
+                        <h3 class="available-devices__list__category__title">Celulares e Tablets</h3>
+                        <ul class="available-devices__list__category__items">
+                            <li>Tablets Amazon Fire</li>
+                            <li>Celulares e Tablets Android</li>
+                            <li>iPhone e iPad</li>
+                        </ul>
+                    </div>
+
+                    <!-- Videogames -->
+                    <div class="available-devices__list__category">
+                        <img src="./dist/images/dispositivos/videogames.png" alt="Videogame" class="available-devices__list__category__icon">
+                        <h3 class="available-devices__list__category__title">Videogames</h3>
+                        <ul class="available-devices__list__category__items">
+                            <li>PS4</li>
+                            <li>PS5</li>
+                            <li>Xbox One</li>
+                            <li>Xbox Series X</li>
+                            <li>Xbox Series S</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="faq">
         <h2 class="title">Perguntas frequentes</h2>
