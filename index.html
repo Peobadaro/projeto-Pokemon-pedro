@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rei Leão</title>
+    <title>O Rei Leão | Disney+</title>
     <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="shortcut icon" href="./dist/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -29,31 +30,47 @@
     <!-- SEÇÃO DO HERO -->
     <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__content__branding">
+            <div class="hero__content__branding">
                 <img src="./dist/images/disneyplus.svg" alt="Disney+">
-            </h1>
+            </div>
             <h3 class="title--small">
                 O Rei da Selva e sua coleção.
             </h3>
+            <p class="text--big">
+                Assista a toda coleção do Rei Leão, incluindo filmes, séries e documentários exclusivos.
+            </p>
+            <ul class="hero__content__combos">
+                <li class="hero__content__combos__combo">
+                    <a href="#" class="button">Assine agora</a>
+                </li>
+                <li class="hero__content__combos__combo">
+                    <a href="#" class="button button--dark">Saiba mais</a>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- SECTION DOS SHOWS -->
     <section class="shows">
         <nav class="shows__tabs">
-            <!-- EM BREVE BOTÃO -->
             <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">
                 Mais populares
             </button>
-            <!-- POPULARES BOTÃO -->
             <button data-tab-button="populares" class="shows__tabs__button">
                 Sugestões
             </button>
+            <button data-tab-button="star_plus" class="shows__tabs__button">
+                Novidades
+            </button>
         </nav>
-        <!-- EM BREVE SESSÃO -->
+        
         <ul data-tab-id="em_breve" class="shows__list shows__list--is-active">
             <li class="shows__list__item">
                 <img src="https://servidor-reileao.vercel.app/images/em_breve/reileao1.webp" alt="Rei Leão">
+                <div class="shows__list__item__text">
+                    <h4 class="title--small">O Rei Leão</h4>
+                    <p class="text--small">1994 • Animação • Família</p>
+                </div>
             </li>
             <li class="shows__list__item">
                 <img src="https://servidor-reileao.vercel.app/images/em_breve/reileão2.webp" alt="Rei Leão 2">
@@ -71,7 +88,7 @@
                 <img src="https://servidor-reileao.vercel.app/images/em_breve/timaoepumba.webp" alt="Rei Leão">
             </li>
         </ul>
-        <!-- MAIS POPULARES SESSÃO  -->
+        
         <ul data-tab-id="populares" class="shows__list">
             <li class="shows__list__item">
                 <img src="https://servidor-reileao.vercel.app/images/mais_populares/moglin.webp" alt="Moglin">
@@ -92,16 +109,26 @@
                 <img src="https://servidor-reileao.vercel.app/images/mais_populares/damaevagabundo.webp" alt="Dama e o vagabundo">
             </li>
         </ul>
+
+        <ul data-tab-id="star_plus" class="shows__list">
+            <li class="shows__list__item">
+                <img src="https://servidor-reileao.vercel.app/images/em_breve/mufasa.webp" alt="Mufasa: O Rei Leão">
+                <div class="shows__list__item__text">
+                    <h4 class="title--small">Mufasa: O Rei Leão</h4>
+                    <p class="text--small">Em breve • 2024</p>
+                </div>
+            </li>
+        </ul>
     </section>
 
     <!-- SESSÃO ASSISTA DO SEU JEITO -->
-    <section class="image-text-section">
-        <img src="./dist/images/tv_pc_tablet_celular.png" alt="">
-        <div class="image-text-section__text_container">
-        <h2 class="title">Só na Disney+</h2>
-        <p class="text--big">
-            Assista em qualquer lugar, em qualquer momento, no seu celular, tablet, computador. Nossa seleção de titulos em 4K não para de crescer. Além disso , para a felicidade de todos, é possivel assistir em 4 telas ao mesmo tempo
-        </p>
+    <section class="watch-anywhere">
+        <img src="./dist/images/tv_pc_tablet_celular.png" alt="Dispositivos">
+        <div class="watch-anywhere__text_container">
+            <h2 class="title">Só na Disney+</h2>
+            <p class="text--big">
+                Assista em qualquer lugar, em qualquer momento, no seu celular, tablet ou computador. Nossa seleção de títulos em 4K não para de crescer. Além disso, para a felicidade de todos, é possível assistir em até 4 telas ao mesmo tempo.
+            </p>
         </div>
     </section>
 
