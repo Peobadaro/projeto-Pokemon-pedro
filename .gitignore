@@ -1,4 +1,12 @@
+# System files
 .DS_Store
-src/.DS_Store
-node_modules
-dist
+**/.DS_Store
+*.DS_Store
+
+# Dependencies
+node_modules/
+dist/
+
+# Environment variables
+.env
+.env.local

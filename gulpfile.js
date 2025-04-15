@@ -1,54 +1,29 @@
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import * as dartSass from 'sass';
-import imagemin from 'gulp-imagemin';
-import uglify from 'gulp-uglify';
-
-const sassCompiler = sass(dartSass);
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require ('sass'))
+const imagemin = require('gulp-imagemin')
+const uglify = require('gulp-uglify');
 
 function scripts() {
-    return gulp.src('./src/scripts/**/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
+    return gulp.src('./src/scripts/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'))
 }
 
 function styles() {
-    return gulp.src('./src/styles/**/*.scss')
-        .pipe(sassCompiler({ outputStyle: 'compressed' }))
+    return gulp.src('./src/styles/*.scss')
+        .pipe(sass({outputStyle: 'compressed' }))
         .pipe(gulp.dest('./dist/css'));
 }
 
 function images() {
-    return gulp.src([
-        './src/images/**/*',
-        './src/images/em_breve/**/*',
-        './src/images/mais_populares/**/*',
-        './src/images/mais_no_star_plus/**/*',
-        './src/images/dispositivos/**/*',
-        './src/images/icones/**/*',
-        './src/images/logos/**/*'
-    ])
+    return gulp.src('./src/images/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'));
 }
 
-function html() {
-    return gulp.src('./src/*.html')
-        .pipe(gulp.dest('./dist'));
-}
+exports.default = gulp.parallel(styles, images, scripts);
 
-function fonts() {
-    return gulp.src('./src/fonts/**/*')
-        .pipe(gulp.dest('./dist/fonts'));
-}
-
-export const build = gulp.parallel(styles, images, scripts, html, fonts);
-export default build;
-
-export function watch() {
-    gulp.watch('./src/styles/**/*.scss', gulp.parallel(styles));
-    gulp.watch('./src/scripts/**/*.js', gulp.parallel(scripts));
-    gulp.watch('./src/images/**/*', gulp.parallel(images));
-    gulp.watch('./src/*.html', gulp.parallel(html));
-    gulp.watch('./src/fonts/**/*', gulp.parallel(fonts));
+exports.watch = function() {
+    gulp.watch('./src/styles/*.scss', gulp.parallel(styles));
+    gulp.watch('./src/scripts/*.js', gulp.parallel(scripts));
 }
