@@ -1,5 +1,9 @@
-src/
-node_modules/
+.git
+node_modules
+src
+dist
+.DS_Store
+README.md
 gulpfile.js
 package.json
 package-lock.json

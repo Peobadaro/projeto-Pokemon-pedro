@@ -6,7 +6,7 @@
     "scripts": {
       "dev": "gulp watch",
       "build": "gulp",
-      "vercel-build": "gulp"
+      "vercel-build": "npm install && gulp"
     },
     "keywords": [],
     "author": "",
