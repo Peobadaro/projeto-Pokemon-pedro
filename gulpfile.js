@@ -9,26 +9,32 @@ const sass = gulpSass(dartSass);
 function scripts() {
     return gulp.src('./src/scripts/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./js'))
 }
 
 function styles() {
     return gulp.src('./src/styles/*.scss')
         .pipe(sass({outputStyle: 'compressed' }))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./css'));
 }
 
 function images() {
     return gulp.src('./src/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images'));
+        .pipe(gulp.dest('./images'));
 }
 
-export const build = gulp.parallel(styles, images, scripts);
+function moveHTML() {
+    return gulp.src('./src/index.html')
+        .pipe(gulp.dest('./'));
+}
+
+export const build = gulp.parallel(styles, images, scripts, moveHTML);
 
 export const watch = function() {
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles));
     gulp.watch('./src/scripts/*.js', gulp.parallel(scripts));
+    gulp.watch('./src/index.html', gulp.parallel(moveHTML));
 }
 
 export default build;
