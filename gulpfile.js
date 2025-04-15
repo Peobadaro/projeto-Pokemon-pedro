@@ -1,7 +1,10 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require ('sass'))
-const imagemin = require('gulp-imagemin')
-const uglify = require('gulp-uglify');
+import gulp from 'gulp';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import imagemin from 'gulp-imagemin';
+import uglify from 'gulp-uglify';
+
+const sass = gulpSass(dartSass);
 
 function scripts() {
     return gulp.src('./src/scripts/*.js')
@@ -21,9 +24,11 @@ function images() {
         .pipe(gulp.dest('./dist/images'));
 }
 
-exports.default = gulp.parallel(styles, images, scripts);
+export const build = gulp.parallel(styles, images, scripts);
 
-exports.watch = function() {
+export const watch = function() {
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles));
     gulp.watch('./src/scripts/*.js', gulp.parallel(scripts));
 }
+
+export default build;
