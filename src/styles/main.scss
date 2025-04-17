@@ -247,16 +247,16 @@ body {
 }
 
 body {
-    font-family: 'waltograph42', sans-serif; // Fonte personalizada como principal
-    background-color: variaveis.$corDeFundo;
-    color: variaveis.$corTexto;
+    font-family: 'waltograph42', sans-serif;
+    background-color: $pokemon-black;
+    color: $pokemon-white;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: variaveis.$corPrimaria;
-    color: variaveis.$corNeutra;
+    background-color: $pokemon-black;
+    color: $pokemon-white;
 
     nav {
         ul {
@@ -271,11 +271,11 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: variaveis.$corNeutra;
+                    color: $pokemon-white;
                     font-size: 32px;
 
                     &:hover {
-                        color: variaveis.$corTexto;
+                        color: $pokemon-yellow;
                     }
                 }
             }
@@ -285,7 +285,7 @@ header {
 
 section.logo {
     text-align: center;
-    background-color: variaveis.$corSecundaria;
+    background-color: $pokemon-black;
     padding: 0; // Remove o padding para evitar bordas internas
     margin: 0; // Remove margens
     width: 100vw; // Ocupa toda a largura da tela
@@ -301,7 +301,7 @@ section.logo {
 .sinopse{
     margin: 10px auto;
     max-width: 90%;
-    background-color: variaveis.$corNeutra;
+    background-color: $pokemon-white;
     border-radius: 8px;
     padding: 10px;
 
@@ -310,12 +310,12 @@ section.logo {
     h3 {
         font-family: 'waltograph42', sans-serif; // Aplica a fonte personalizada nos títulos
         font-size: 40px;
-        color: variaveis.$corPrimaria;
+        color: $pokemon-red;
         text-align: center;
     }
 
     p {
-        color: variaveis.$corEscura;
+        color: $pokemon-black;
         font-size: 28px;
     }
 }
@@ -326,7 +326,7 @@ section.logo {
     h1 {
         text-align: center;
         font-size: 3rem;
-        color: variaveis.$corPrimaria;
+        color: $pokemon-red;
         margin-bottom: 20px;
     }
 
@@ -340,8 +340,8 @@ section.logo {
     td {
         padding: 15px;
         vertical-align: top;
-        background-color: variaveis.$corNeutra;
-        border: 1px solid variaveis.$corPrimaria;
+        background-color: $pokemon-white;
+        border: 1px solid $pokemon-red;
         border-radius: 10px;
     }
 
@@ -356,14 +356,14 @@ section.logo {
 
     h3 {
         font-size: 2rem;
-        color: variaveis.$corTexto;
+        color: $pokemon-white;
         margin: 10px 0;
     }
 
     p {
         font-size: 1.2rem;
         line-height: 1.4;
-        color: variaveis.$corEscura;
+        color: $pokemon-black;
     }
 }
 
@@ -401,7 +401,7 @@ section.logo {
     margin: 0; // Remove margens
     width: 100vw; // Ocupa toda a largura da tela
     height: 100vh; // Ocupa toda a altura da viewport
-    background-color: variaveis.$corSecundaria; // Define uma cor de fundo (opcional)
+    background-color: $pokemon-black; // Define uma cor de fundo (opcional)
 
     iframe {
         width: 80%; // O vídeo ocupará 80% da largura da seção
@@ -413,8 +413,8 @@ section.logo {
 }
 
 footer {
-    background-color: variaveis.$corTerciaria;
-    color: variaveis.$corNeutra;
+    background-color: $pokemon-black;
+    color: $pokemon-white;
     text-align: center;
     padding: 10px;
 }
