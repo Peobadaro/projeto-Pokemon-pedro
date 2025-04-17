@@ -1,8 +1,7 @@
 {
     "name": "pokemon-landing-page",
     "version": "1.0.0",
-    "description": "Landing page do Pokémon usando SASS e Gulp",
-    "main": "index.js",
+    "description": "Landing page do Pokémon",
     "scripts": {
         "dev": "gulp watch",
         "build": "gulp",
@@ -17,4 +16,4 @@
         "gulp-uglify": "^3.0.2",
         "sass": "^1.69.7"
     }
-} 
+}

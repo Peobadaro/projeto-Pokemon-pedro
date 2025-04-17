@@ -1,21 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Adiciona efeito de scroll suave para links internos
+    // Smooth scroll para links do menu
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
-    // Adiciona classe para header quando rolar a página
+    // Animação do header ao rolar a página
     const header = document.querySelector('.header');
+    let lastScroll = 0;
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = '#CC0000';
-        } else {
-            header.style.backgroundColor = '#E3350D';
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 0) {
+            header.classList.remove('scroll-up');
+            return;
         }
+
+        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+            header.classList.remove('scroll-up');
+            header.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+        }
+
+        lastScroll = currentScroll;
     });
-}); 
+});
