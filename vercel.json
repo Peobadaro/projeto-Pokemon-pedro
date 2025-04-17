@@ -1,11 +1,11 @@
 {
     "buildCommand": "npm run build",
     "outputDirectory": "build",
-    "framework": "static",
     "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
     ]
-} 
+  }
+  
