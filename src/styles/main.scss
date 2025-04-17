@@ -1,186 +1,181 @@
 @use 'variaveis';
-@use 'hero';
-@use 'shows';
-@use 'available';
-@use 'footer';
-@use 'header';
-
-
 
 @font-face {
-    font-family: Avenir;
-    src: url(../../assents/fonts/Avenir-Regular.woff2);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Avenir;
-    src: url(../../assents/fonts/Avenir-Bold.woff2);
-    font-weight: 700;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Avenir, sans-serif;
-    list-style: none;
+    font-family: 'waltograph42';
+    src: url('../../assets/fonts/waltograph42.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
+    font-family: 'waltograph42', sans-serif; // Fonte personalizada como principal
     background-color: variaveis.$corDeFundo;
+    color: variaveis.$corTexto;
+    margin: 0;
+    padding: 0;
 }
 
-@mixin text ($fontSize: 16px) {
-    font-size: $fontSize;
-    line-height: $fontSize + 10px;
-    color: variaveis.$corTextoPrincipal
-}
+header {
+    background-color: variaveis.$corPrimaria;
+    color: variaveis.$corNeutra;
 
-@mixin title ($fontSize: 40px) {
-    @include text($fontSize);
-    color: variaveis.$corTextoSecundario
-}
-
-.text--big {
-    @include text(18px);
-
-    @media (max-width:768px) {
-        @include text(15px);
-    }
-}
-
-.text {
-    @include text;
-
-    @media (max-width:768px) {
-        @include text(14px);
-    }
-}
-
-.text--small {
-    @include text(12px);
-
-    @media (max-width:768px) {
-        @include text(11px);
-    }
-}
-
-.link-text {
-    @include text(18px);
-    color: variaveis.$corTextoSecundario;
-    text-decoration: underline
-}
-
-.title--big {
-    @include title(44px);
-
-    @media (max-width:768px) {
-        @include title(26px);
-    }
-}
-
-.title {
-    @include title;
-
-    @media (max-width:768px) {
-        @include title(24px);
-    }
-}
-
-.title--small {
-    @include title(28px);
-
-    @media (max-width:768px) {
-        @include title(22px);
-    }
-}
-
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-    font-size: 18px;
-    color: variaveis.$corTextoSecundario;
-    background-color: variaveis.$corDeFundoBotaoPrimario;
-    text-transform: uppercase;
-    border-radius: 4px;
-    text-decoration: none;
-    padding: 8px 14px;
-    letter-spacing: 1px;
-    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
-
-    &:hover {
-        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
-    }
-
-    &--secondary {
-    background-color: variaveis.$corDeFundoBotaoSecundario;
-    border-color: variaveis.$corDeFundoBotaoSecundario;
-
-        &:hover {
-        background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
-    }
-    }
-
-    &--dark {
-        background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
-        border-color: variaveis.$corTextoSecundario;
-
-        &:hover {
-            background-color: variaveis.$corTextoSecundario;
-            color: variaveis.$corDeFundo;
-        }
-    }
-}
-
-.image-text-section {
-    padding: 5.6vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-
-    @media (max-width:768px) {
-        display: block;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-    &__text_container {
-        padding: 0 2vw;
-    
-        h2 {
-            margin-bottom: 24px;
-        }
-    }
-
-    &--image-full-width {
-        display: block;
-        position: relative;
-
-        img {
-            width: 100%;
-        }
-
-        &__text_container {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            height: 100%;
-            width: calc(50% - 5.6vw);
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            margin: 0;
 
-            @media (max-width:768px) {
-                position: relative;
-                left: 0;
-                width: 100%;
+            li {
+                margin: 0 15px;
+
+                a {
+                    text-decoration: none;
+                    color: variaveis.$corNeutra;
+                    font-size: 32px;
+
+                    &:hover {
+                        color: variaveis.$corTexto;
+                    }
+                }
             }
         }
     }
+}
+
+section.logo {
+    text-align: center;
+    background-color: variaveis.$corSecundaria;
+    padding: 0; // Remove o padding para evitar bordas internas
+    margin: 0; // Remove margens
+    width: 100vw; // Ocupa toda a largura da tela
+    height: 100vh; // Ocupa toda a altura da viewport
+
+    img {
+        width: 100%; // Imagem se ajusta à largura da seção
+        height: 100%; // Imagem se ajusta à altura da seção
+        object-fit: cover; // Mantém proporção enquanto cobre o espaço
+    }
+}
+
+.sinopse{
+    margin: 10px auto;
+    max-width: 90%;
+    background-color: variaveis.$corNeutra;
+    border-radius: 8px;
+    padding: 10px;
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'waltograph42', sans-serif; // Aplica a fonte personalizada nos títulos
+        font-size: 40px;
+        color: variaveis.$corPrimaria;
+        text-align: center;
+    }
+
+    p {
+        color: variaveis.$corEscura;
+        font-size: 28px;
+    }
+}
+
+.personagens {
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        color: variaveis.$corPrimaria;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    td {
+        padding: 15px;
+        vertical-align: top;
+        background-color: variaveis.$corNeutra;
+        border: 1px solid variaveis.$corPrimaria;
+        border-radius: 10px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 150px; // Limita o tamanho das imagens
+        height: 150px; // Tamanho fixo para todas as imagens
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        color: variaveis.$corTexto;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        color: variaveis.$corEscura;
+    }
+}
+
+// Responsividade para Personagens
+@media (max-width: 768px) {
+    .personagens table {
+        font-size: 0.9rem; // Reduz o tamanho da fonte para melhor exibição
+    }
+
+    .personagens img {
+        max-width: 120px; // Ajusta as imagens para telas menores
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .personagens table {
+        font-size: 0.8rem;
+    }
+
+    .personagens img {
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .personagens td {
+        padding: 10px; // Reduz o espaçamento interno
+    }
+}
+.trailer {
+    display: flex; // Usar flexbox para centralizar o conteúdo
+    align-items: center; // Centralizar verticalmente
+    justify-content: center; // Centralizar horizontalmente
+    padding: 0; // Remove o padding
+    margin: 0; // Remove margens
+    width: 100vw; // Ocupa toda a largura da tela
+    height: 100vh; // Ocupa toda a altura da viewport
+    background-color: variaveis.$corSecundaria; // Define uma cor de fundo (opcional)
+
+    iframe {
+        width: 80%; // O vídeo ocupará 80% da largura da seção
+        height: 80%; // O vídeo ocupará 80% da altura da seção
+        max-width: 1200px; // Define um limite máximo para largura
+        max-height: 675px; // Define um limite máximo para altura
+        border: none; // Remove bordas do iframe
+    }
+}
+
+footer {
+    background-color: variaveis.$corTerciaria;
+    color: variaveis.$corNeutra;
+    text-align: center;
+    padding: 10px;
 }
