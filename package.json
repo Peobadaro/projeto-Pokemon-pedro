@@ -1,25 +1,20 @@
 {
-    "name": "rei-leao-ebac",
+    "name": "pokemon-landing-page",
     "version": "1.0.0",
+    "description": "Landing page do Pokémon usando SASS e Gulp",
     "main": "index.js",
     "scripts": {
-      "dev": "gulp watch",
-      "build": "gulp",
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "gulp watch",
+        "build": "gulp",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": [],
     "author": "",
     "license": "ISC",
-    "description": "",
     "devDependencies": {
-      "gulp": "^5.0.0",
-      "gulp-sass": "^6.0.0",
-      "rimraf": "^6.0.1"
-    },
-    "dependencies": {
-      "gulp-imagemin": "^6.0.0",
-      "gulp-uglify": "^3.0.2",
-      "imagemin-mozjpeg": "^10.0.0",
-      "sass": "^1.83.4"
+        "gulp": "^4.0.2",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.69.7"
     }
-  }
+} 
